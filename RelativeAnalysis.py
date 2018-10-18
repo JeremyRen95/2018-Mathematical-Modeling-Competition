@@ -13,7 +13,7 @@ def data2mat(filename):   #将Gname恐怖组织序列标签化
     gnamelist = gnamearray.tolist()
     gnamesort = gnameMat.drop_duplicates().values #去重过后的标签
     gnamesort_list = gnamesort.tolist()
-    gname_num = {gnamesort_list[1]:0}
+    gname_num = {gnamesort_list[1]:0} #初始化字典
     gnamesort = np.delete(gnamesort, 1)#所有类别列
     gnamenumMat = []
     #建立字典 组织-序号
